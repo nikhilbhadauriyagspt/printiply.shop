@@ -34,19 +34,19 @@ export default function FeaturedTabs({ printers = [], accessories = [] }) {
   return (
     <section className="py-20 bg-white font-snpro">
       <div className="max-w-[1920px] mx-auto px-6 md:px-10 lg:px-12">
-        
+
         {/* --- Header & Tabs - Stylish & Compact --- */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-10">
           <div className="flex gap-6 items-center">
             {/* Vertical Decorative Bar */}
             <div className="hidden md:block h-16 w-1.5 bg-brand rounded-full"></div>
-            
+
             <div className="space-y-1">
-              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.3em] flex items-center gap-2">
+              <span className="text-[10px] font-bold text-slate-400 capitalize tracking-[0.3em] flex items-center gap-2">
                 <div className="h-1 w-1 rounded-full bg-brand"></div>
                 New Arrivals
               </span>
-              <h2 className="text-3xl md:text-4xl font-black text-brand uppercase tracking-tight leading-none">
+              <h2 className="text-3xl md:text-4xl font-bold text-brand capitalize  leading-none">
                 Latest <span className="text-slate-400 italic">Drop.</span>
               </h2>
             </div>
@@ -58,10 +58,10 @@ export default function FeaturedTabs({ printers = [], accessories = [] }) {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`relative flex items-center gap-3 px-6 py-3.5 rounded-[1.2rem] md:rounded-[1.5rem] text-[10px] font-black uppercase tracking-widest transition-all duration-500 ${activeTab === tab.id ? 'text-white' : 'text-slate-400 hover:text-slate-900'}`}
+                className={`relative flex items-center gap-3 px-6 py-3.5 rounded-[1.2rem] md:rounded-[1.5rem] text-[10px] font-bold capitalize tracking-widest transition-all duration-500 ${activeTab === tab.id ? 'text-white' : 'text-slate-400 hover:text-slate-900'}`}
               >
                 {activeTab === tab.id && (
-                  <motion.div 
+                  <motion.div
                     layoutId="activeTabBg"
                     className="absolute inset-0 bg-brand rounded-[1.2rem] md:rounded-[1.5rem] shadow-xl shadow-brand/20"
                     transition={{ type: "spring", duration: 0.6, bounce: 0.2 }}
@@ -93,14 +93,14 @@ export default function FeaturedTabs({ printers = [], accessories = [] }) {
               {activeData.map((p, i) => (
                 <div key={p.id} className="group">
                   <div className="relative aspect-square rounded-[2rem] bg-slate-50 border border-slate-100 overflow-hidden p-8 transition-all duration-700 hover:bg-white hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.05)] hover:border-brand/20">
-                    
+
                     <div className="absolute top-5 left-5 z-10">
-                       <span className="px-2.5 py-1 bg-white/80 backdrop-blur-md border border-slate-100 rounded-lg text-[8px] font-black uppercase tracking-widest text-slate-400">
-                         {p.brand_name || 'Strategic'}
-                       </span>
+                      <span className="px-2.5 py-1 bg-white/80 backdrop-blur-md border border-slate-100 rounded-lg text-[8px] font-bold capitalize tracking-widest text-slate-400">
+                        {p.brand_name || 'Strategic'}
+                      </span>
                     </div>
 
-                    <button 
+                    <button
                       onClick={() => toggleWishlist(p)}
                       className={`absolute top-5 right-5 h-9 w-9 rounded-full bg-white border border-slate-100 flex items-center justify-center transition-all shadow-sm z-10 ${isInWishlist(p.id) ? 'text-red-500' : 'text-slate-300 hover:text-red-500'}`}
                     >
@@ -108,15 +108,15 @@ export default function FeaturedTabs({ printers = [], accessories = [] }) {
                     </button>
 
                     <Link to={`/product/${p.slug}`} className="w-full h-full flex items-center justify-center">
-                      <img 
-                        src={getImagePath(p.images)} 
+                      <img
+                        src={getImagePath(p.images)}
                         alt={p.name}
                         className="max-w-full max-h-full object-contain transition-transform duration-700 group-hover:scale-110"
                         onError={(e) => { e.target.src = "https://via.placeholder.com/400x400?text=" + p.name; }}
                       />
                     </Link>
 
-                    <button 
+                    <button
                       onClick={() => handleAddToCart(p)}
                       disabled={addedItems[p.id]}
                       className={`absolute bottom-5 right-5 h-10 w-10 rounded-2xl flex items-center justify-center transition-all shadow-xl z-10 ${addedItems[p.id] ? 'bg-emerald-500 text-white' : 'bg-slate-950 text-white hover:bg-brand scale-0 translate-y-4 group-hover:scale-100 group-hover:translate-y-0'}`}
@@ -127,10 +127,10 @@ export default function FeaturedTabs({ printers = [], accessories = [] }) {
 
                   <div className="mt-5 px-1">
                     <Link to={`/product/${p.slug}`}>
-                      <h3 className="text-[11px] font-black text-slate-950 uppercase tracking-tight line-clamp-1 group-hover:text-brand transition-colors mb-1">{p.name}</h3>
+                      <h3 className="text-[11px] font-bold text-slate-950 capitalize  line-clamp-1 group-hover:text-brand transition-colors mb-1">{p.name}</h3>
                     </Link>
                     <div className="flex items-center justify-between">
-                      <span className="text-sm font-black text-slate-950">${p.price}</span>
+                      <span className="text-sm font-bold text-slate-950">${p.price}</span>
                       <div className="h-1 w-1 rounded-full bg-slate-200 group-hover:bg-brand transition-colors"></div>
                     </div>
                   </div>
@@ -142,12 +142,12 @@ export default function FeaturedTabs({ printers = [], accessories = [] }) {
 
         {/* View All Button */}
         <div className="mt-20 flex justify-center">
-           <Link to="/shop" className="group flex items-center gap-4 px-10 py-4 bg-slate-50 hover:bg-slate-950 hover:text-white rounded-full transition-all duration-500 border border-slate-100">
-              <span className="text-[10px] font-black uppercase tracking-[0.3em]">View full department</span>
-              <div className="h-6 w-6 rounded-full bg-white flex items-center justify-center group-hover:bg-brand transition-all">
-                 <ArrowRight size={14} className="text-slate-900 group-hover:text-white transition-all" />
-              </div>
-           </Link>
+          <Link to="/shop" className="group flex items-center gap-4 px-10 py-4 bg-slate-50 hover:bg-slate-950 hover:text-white rounded-full transition-all duration-500 border border-slate-100">
+            <span className="text-[10px] font-bold capitalize tracking-[0.3em]">View full department</span>
+            <div className="h-6 w-6 rounded-full bg-white flex items-center justify-center group-hover:bg-brand transition-all">
+              <ArrowRight size={14} className="text-slate-900 group-hover:text-white transition-all" />
+            </div>
+          </Link>
         </div>
       </div>
     </section>

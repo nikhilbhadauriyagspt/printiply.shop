@@ -118,51 +118,51 @@ export default function FAQ() {
 
   const filteredData = faqData.map(cat => ({
     ...cat,
-    questions: cat.questions.filter(q => 
-      q.q.toLowerCase().includes(searchQuery.toLowerCase()) || 
+    questions: cat.questions.filter(q =>
+      q.q.toLowerCase().includes(searchQuery.toLowerCase()) ||
       q.a.toLowerCase().includes(searchQuery.toLowerCase())
     )
   })).filter(cat => cat.questions.length > 0);
 
   return (
     <div className="min-h-screen bg-gray-50/50 pt-32 pb-20 font-urbanist">
-      <SEO 
-        title="FAQ | Support & Assistance" 
+      <SEO
+        title="FAQ | Support & Assistance"
         description="Find answers to common questions about orders, shipping, products, and technical support at Printiply."
       />
       <div className="max-w-[1400px] mx-auto px-6 md:px-10">
-        
+
         {/* Header */}
         <div className="text-center mb-20">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 text-blue-600 text-[10px] font-black uppercase tracking-[0.3em] mb-6"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 text-blue-600 text-[10px] font-bold capitalize tracking-[0.3em] mb-6"
           >
             <HelpCircle size={14} /> Help Center
           </motion.div>
-          <h1 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter uppercase leading-none mb-8">
+          <h1 className="text-4xl md:text-6xl font-bold text-slate-900  capitalize leading-none mb-8">
             Frequently <span className="text-slate-400 italic">Asked Questions.</span>
           </h1>
-          
+
           <div className="max-w-2xl mx-auto relative group">
             <Search className="absolute left-6 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-blue-600 transition-colors" size={20} />
-            <input 
-              type="text" 
+            <input
+              type="text"
               placeholder="SEARCH FOR ANSWERS..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full h-16 pl-16 pr-6 bg-white border border-gray-100 rounded-[2rem] shadow-xl shadow-gray-200/20 focus:bg-white focus:border-blue-600 outline-none text-xs font-bold uppercase transition-all"
+              className="w-full h-16 pl-16 pr-6 bg-white border border-gray-100 rounded-[2rem] shadow-xl shadow-gray-200/20 focus:bg-white focus:border-blue-600 outline-none text-xs font-bold capitalize transition-all"
             />
           </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
-          
+
           {/* Navigation Sidebar */}
           <div className="lg:col-span-4 space-y-2">
             <div className="sticky top-40 space-y-2">
-              <span className="text-[10px] font-black text-slate-400 uppercase tracking-[0.4em] ml-4 mb-4 block">Categories</span>
+              <span className="text-[10px] font-bold text-slate-400 capitalize tracking-[0.4em] ml-4 mb-4 block">Categories</span>
               {faqData.map((cat) => (
                 <button
                   key={cat.category}
@@ -170,11 +170,10 @@ export default function FAQ() {
                     setActiveCategory(cat.category);
                     setOpenIndex(0);
                   }}
-                  className={`w-full text-left px-6 py-4 rounded-2xl text-[11px] font-black uppercase tracking-widest transition-all ${
-                    activeCategory === cat.category 
-                    ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/20 translate-x-2' 
+                  className={`w-full text-left px-6 py-4 rounded-2xl text-[11px] font-bold capitalize tracking-widest transition-all ${activeCategory === cat.category
+                    ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/20 translate-x-2'
                     : 'text-slate-500 hover:bg-white hover:text-slate-900 hover:shadow-sm'
-                  }`}
+                    }`}
                 >
                   {cat.category}
                 </button>
@@ -183,8 +182,8 @@ export default function FAQ() {
               {/* Contact Card */}
               <div className="mt-12 p-8 bg-slate-900 rounded-[2.5rem] text-white overflow-hidden relative">
                 <div className="absolute top-0 right-0 w-24 h-24 bg-blue-600/20 blur-3xl rounded-full" />
-                <h4 className="text-lg font-black uppercase tracking-tight mb-2">Still need help?</h4>
-                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-8">Our team is available to assist</p>
+                <h4 className="text-lg font-bold capitalize  mb-2">Still need help?</h4>
+                <p className="text-[10px] font-bold text-slate-400 capitalize tracking-widest mb-8">Our team is available to assist</p>
                 <div className="space-y-4">
                   <a href="mailto:support@printiply.shop" className="flex items-center gap-4 text-xs font-bold hover:text-blue-400 transition-colors">
                     <div className="h-10 w-10 rounded-xl bg-white/5 flex items-center justify-center"><Mail size={16} /></div>
@@ -209,33 +208,30 @@ export default function FAQ() {
                 exit={{ opacity: 0, x: -20 }}
                 className="space-y-4"
               >
-                <h3 className="text-2xl font-black text-slate-900 uppercase tracking-tighter mb-8 border-b border-gray-200 pb-6">
+                <h3 className="text-2xl font-bold text-slate-900 capitalize  mb-8 border-b border-gray-200 pb-6">
                   {activeCategory}
                 </h3>
-                
+
                 {filteredData.find(c => c.category === activeCategory)?.questions.map((faq, idx) => (
-                  <div 
+                  <div
                     key={idx}
-                    className={`bg-white rounded-[2rem] border transition-all duration-500 overflow-hidden ${
-                      openIndex === idx ? 'border-blue-600 shadow-xl shadow-blue-600/5' : 'border-gray-100 hover:border-gray-300'
-                    }`}
+                    className={`bg-white rounded-[2rem] border transition-all duration-500 overflow-hidden ${openIndex === idx ? 'border-blue-600 shadow-xl shadow-blue-600/5' : 'border-gray-100 hover:border-gray-300'
+                      }`}
                   >
                     <button
                       onClick={() => setOpenIndex(openIndex === idx ? -1 : idx)}
                       className="w-full px-8 py-8 flex items-center justify-between text-left"
                     >
-                      <span className={`text-sm md:text-base font-black uppercase tracking-tight leading-snug pr-8 ${
-                        openIndex === idx ? 'text-blue-600' : 'text-slate-900'
-                      }`}>
+                      <span className={`text-sm md:text-base font-bold capitalize  leading-snug pr-8 ${openIndex === idx ? 'text-blue-600' : 'text-slate-900'
+                        }`}>
                         {faq.q}
                       </span>
-                      <div className={`h-10 w-10 rounded-full flex items-center justify-center shrink-0 transition-all ${
-                        openIndex === idx ? 'bg-blue-600 text-white rotate-180' : 'bg-gray-50 text-slate-400 hover:bg-slate-900 hover:text-white'
-                      }`}>
+                      <div className={`h-10 w-10 rounded-full flex items-center justify-center shrink-0 transition-all ${openIndex === idx ? 'bg-blue-600 text-white rotate-180' : 'bg-gray-50 text-slate-400 hover:bg-slate-900 hover:text-white'
+                        }`}>
                         {openIndex === idx ? <Minus size={18} /> : <Plus size={18} />}
                       </div>
                     </button>
-                    
+
                     <AnimatePresence>
                       {openIndex === idx && (
                         <motion.div
@@ -260,8 +256,8 @@ export default function FAQ() {
                 {filteredData.length === 0 && (
                   <div className="py-20 text-center bg-white rounded-[3rem] border border-gray-100">
                     <Search size={40} className="text-gray-200 mx-auto mb-6" />
-                    <h4 className="text-lg font-black text-slate-900 uppercase">No matches found</h4>
-                    <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mt-2">Try searching with different keywords</p>
+                    <h4 className="text-lg font-bold text-slate-900 capitalize">No matches found</h4>
+                    <p className="text-xs font-bold text-slate-400 capitalize tracking-widest mt-2">Try searching with different keywords</p>
                   </div>
                 )}
               </motion.div>

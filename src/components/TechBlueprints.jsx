@@ -34,17 +34,17 @@ const techProducts = [
 export default function TechBlueprints() {
   return (
     <section className="px-6 md:px-10 lg:px-12 py-24 bg-white font-urbanist">
-      
+
       {/* --- UNIQUE HEADING: TECHNICAL LINE STYLE --- */}
       <div className="flex items-center gap-8 mb-20">
         <div className="h-[100px] w-px bg-gray-200 relative hidden sm:block">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3 h-3 bg-blue-600 rounded-full"></div>
         </div>
         <div>
-          <h2 className="text-4xl font-black text-slate-900 tracking-tighter uppercase leading-none">
+          <h2 className="text-4xl font-bold text-slate-900  capitalize leading-none">
             Technical <br /><span className="text-blue-600 italic">Blueprints.</span>
           </h2>
-          <p className="text-slate-400 font-bold text-xs uppercase tracking-widest mt-4 flex items-center gap-2">
+          <p className="text-slate-400 font-bold text-xs capitalize tracking-widest mt-4 flex items-center gap-2">
             <span className="w-4 h-px bg-gray-300"></span> Performance Benchmarks 2026
           </p>
         </div>
@@ -52,7 +52,7 @@ export default function TechBlueprints() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {techProducts.map((p, i) => (
-          <motion.div 
+          <motion.div
             key={i}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -65,19 +65,19 @@ export default function TechBlueprints() {
             </div>
 
             <div className="mb-12">
-              <span className="text-[10px] font-black tracking-widest text-blue-600 uppercase">{p.series}</span>
-              <h3 className="text-3xl font-black text-slate-900 tracking-tighter mt-1">{p.name}</h3>
+              <span className="text-[10px] font-bold tracking-widest text-blue-600 capitalize">{p.series}</span>
+              <h3 className="text-3xl font-bold text-slate-900  mt-1">{p.name}</h3>
             </div>
 
             {/* Performance Bars */}
             <div className="space-y-8">
               <div>
                 <div className="flex justify-between items-end mb-2">
-                  <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Processing Power</span>
-                  <span className="text-sm font-black text-slate-900">{p.perf}%</span>
+                  <span className="text-[10px] font-bold text-slate-400 capitalize tracking-widest">Processing Power</span>
+                  <span className="text-sm font-bold text-slate-900">{p.perf}%</span>
                 </div>
                 <div className="h-1.5 w-full bg-gray-100 rounded-full overflow-hidden">
-                  <motion.div 
+                  <motion.div
                     initial={{ width: 0 }}
                     whileInView={{ width: `${p.perf}%` }}
                     transition={{ duration: 1.5, delay: 0.5 }}
@@ -88,11 +88,11 @@ export default function TechBlueprints() {
 
               <div>
                 <div className="flex justify-between items-end mb-2">
-                  <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Thermal Efficiency</span>
-                  <span className="text-sm font-black text-slate-900">{p.thermal}%</span>
+                  <span className="text-[10px] font-bold text-slate-400 capitalize tracking-widest">Thermal Efficiency</span>
+                  <span className="text-sm font-bold text-slate-900">{p.thermal}%</span>
                 </div>
                 <div className="h-1.5 w-full bg-gray-100 rounded-full overflow-hidden">
-                  <motion.div 
+                  <motion.div
                     initial={{ width: 0 }}
                     whileInView={{ width: `${p.thermal}%` }}
                     transition={{ duration: 1.5, delay: 0.7 }}
@@ -103,13 +103,13 @@ export default function TechBlueprints() {
             </div>
 
             <div className="mt-12 pt-8 border-t border-dashed border-gray-200">
-               <div className="flex justify-between items-center">
-                 <div>
-                   <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Display Standard</p>
-                   <p className="text-sm font-black text-slate-900 uppercase">{p.display}</p>
-                 </div>
-                 <button className="text-[10px] font-black text-blue-600 uppercase tracking-widest hover:underline">Full Specs</button>
-               </div>
+              <div className="flex justify-between items-center">
+                <div>
+                  <p className="text-[9px] font-bold text-slate-400 capitalize tracking-widest">Display Standard</p>
+                  <p className="text-sm font-bold text-slate-900 capitalize">{p.display}</p>
+                </div>
+                <button className="text-[10px] font-bold text-blue-600 capitalize tracking-widest hover:underline">Full Specs</button>
+              </div>
             </div>
           </motion.div>
         ))}

@@ -8,8 +8,8 @@ import banner1 from "@/assets/bannerr/banner1.jpg";
 export default function About() {
   return (
     <div className="bg-white min-h-screen font-urbanist overflow-hidden">
-      <SEO 
-        title="About Our Journey | Authorized HP Excellence" 
+      <SEO
+        title="About Our Journey | Authorized HP Excellence"
         description="Learn about Printiply, our vision to redefine tech experience, and our commitment as an authorized HP partner."
       />
 
@@ -33,11 +33,11 @@ export default function About() {
             <div className="flex items-center gap-3 mb-8 bg-white/10 backdrop-blur-md w-fit px-4 py-2 rounded-2xl border border-white/10">
               <img src="/brands/hp.jpg" alt="HP" className="h-5 w-auto object-contain rounded" />
               <div className="h-4 w-px bg-white/20" />
-              <span className="text-[15px] font-black text-blue-400 uppercase tracking-[0.3em]">Authorized HP Partner</span>
+              <span className="text-[15px] font-bold text-blue-400 capitalize tracking-[0.3em]">Authorized HP Partner</span>
             </div>
 
-            <h1 className="text-4xl md:text-7xl font-black text-white leading-[0.9] tracking-tighter uppercase mb-8">
-              Redefining <br /> <span className="text-slate-400 italic">Technology.</span>
+            <h1 className="text-4xl md:text-7xl font-bold text-white leading-[0.9]  capitalize mb-8">
+              Redefining <br /> <span className="text-slate-400">Technology.</span>
             </h1>
 
             <p className="text-slate-300 text-lg md:text-xl font-bold leading-relaxed max-w-xl border-l-4 border-blue-600 pl-8 mb-10">
@@ -45,7 +45,7 @@ export default function About() {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <Link to="/shop" className="px-10 py-5 bg-blue-600 text-white rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-white hover:text-slate-900 transition-all shadow-2xl shadow-blue-600/20">
+              <Link to="/shop" className="px-10 py-5 bg-blue-600 text-white rounded-2xl font-bold text-xs capitalize tracking-widest hover:bg-white hover:text-slate-900 transition-all shadow-2xl shadow-blue-600/20">
                 Explore Catalog
               </Link>
             </div>
@@ -58,9 +58,9 @@ export default function About() {
         <div className="max-w-[1920px] mx-auto">
           <div className="flex items-end justify-between mb-12 border-b border-gray-100 pb-8">
             <div>
-              <span className="text-xl font-black tracking-[0.4em] uppercase text-blue-600 mb-2 block ml-1">Since 2026</span>
-              <h2 className="text-2xl md:text-4xl font-black text-slate-900 tracking-tighter uppercase leading-none">
-                Our <span className="text-slate-400 italic">Journey.</span>
+              <span className="text-xl font-bold tracking-[0.4em] capitalize text-blue-600 mb-2 block ml-1">Since 2026</span>
+              <h2 className="text-2xl md:text-4xl font-bold text-slate-900  capitalize leading-none">
+                Our <span className="text-slate-400">Journey.</span>
               </h2>
             </div>
           </div>
@@ -74,14 +74,10 @@ export default function About() {
                 That’s why we partnered with HP, to bring customers a seamless and transparent shopping experience backed by expert service. Based in New Orleans, Louisiana, we've grown into a nationwide platform serving both professionals and home users.
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="p-8 bg-gray-50 rounded-3xl border border-gray-100">
-                <h4 className="text-3xl font-black text-slate-900 mb-2">14K+</h4>
-                <p className="text-xl font-black text-slate-400 uppercase tracking-widest">Active Members</p>
-              </div>
-              <div className="p-8 bg-blue-50/50 rounded-3xl border border-blue-100">
-                <h4 className="text-3xl font-black text-blue-600 mb-2">100%</h4>
-                <p className="text-xl font-black text-slate-400 uppercase tracking-widest">Genuine Tech</p>
+            <div className="grid grid-cols-1 gap-4">
+              <div className="p-8 bg-blue-50/50 rounded-3xl border border-blue-100 flex flex-col items-center justify-center text-center">
+                <h4 className="text-4xl font-bold text-blue-600 mb-2">100%</h4>
+                <p className="text-xl font-bold text-slate-400 capitalize tracking-widest">Genuine Tech</p>
               </div>
             </div>
           </div>
@@ -93,9 +89,9 @@ export default function About() {
         <div className="max-w-[1920px] mx-auto">
           <div className="flex items-end justify-between mb-12 border-b border-gray-100 pb-8">
             <div>
-              <span className="text-xl font-black tracking-[0.4em] uppercase text-blue-600 mb-2 block ml-1">What We Do</span>
-              <h2 className="text-2xl md:text-4xl font-black text-slate-900 tracking-tighter uppercase leading-none">
-                Specialized <span className="text-slate-400 italic">Services.</span>
+              <span className="text-xl font-bold tracking-[0.4em] capitalize text-blue-600 mb-2 block ml-1">What We Do</span>
+              <h2 className="text-2xl md:text-4xl font-bold text-slate-900  capitalize leading-none">
+                Specialized <span className="text-slate-400">Services.</span>
               </h2>
             </div>
           </div>
@@ -116,7 +112,7 @@ export default function About() {
                 <div className="h-14 w-14 rounded-2xl bg-gray-50 border border-gray-100 text-slate-900 flex items-center justify-center mb-8 group-hover:bg-blue-600 group-hover:text-white transition-all shadow-sm">
                   <item.icon size={24} />
                 </div>
-                <h3 className="text-xl font-black text-slate-900 uppercase tracking-tight mb-4">{item.title}</h3>
+                <h3 className="text-xl font-bold text-slate-900 capitalize  mb-4">{item.title}</h3>
                 <p className="text-slate-500 font-bold text-sm leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
@@ -129,16 +125,16 @@ export default function About() {
         <div className="max-w-[1920px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="p-12 md:p-16 rounded-[3.5rem] bg-blue-600 text-white space-y-6 relative overflow-hidden group">
             <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 blur-3xl rounded-full" />
-            <span className="text-xl font-black uppercase tracking-[0.4em] text-blue-200">Our Mission</span>
-            <h3 className="text-3xl md:text-4xl font-black uppercase tracking-tighter leading-none">Empowering <br />Every Customer.</h3>
+            <span className="text-xl font-bold capitalize tracking-[0.4em] text-blue-200">Our Mission</span>
+            <h3 className="text-3xl md:text-4xl font-bold capitalize  leading-none">Empowering <br />Every Customer.</h3>
             <p className="text-blue-100 font-bold text-lg leading-relaxed ">
               To empower every customer with reliable, efficient, and sustainable technology solutions — through genuine products, expert advice, and a customer-first approach.
             </p>
           </div>
           <div className="p-12 md:p-16 rounded-[3.5rem] bg-slate-900 text-white space-y-6 relative overflow-hidden group">
             <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/10 blur-3xl rounded-full" />
-            <span className="text-xl font-black uppercase tracking-[0.4em] text-slate-500">Our Vision</span>
-            <h3 className="text-3xl md:text-4xl font-black uppercase tracking-tighter leading-none">United States <br />Tech Leader.</h3>
+            <span className="text-xl font-bold capitalize tracking-[0.4em] text-slate-500">Our Vision</span>
+            <h3 className="text-3xl md:text-4xl font-bold capitalize  leading-none">United States <br />Tech Leader.</h3>
             <p className="text-slate-400 font-bold text-lg leading-relaxed ">
               To become a leading HP-partner e-commerce brand, known for delivering cutting-edge technology, unmatched service, and long-term value.
             </p>
@@ -151,9 +147,9 @@ export default function About() {
         <div className="max-w-[1920px] mx-auto">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 border-b border-gray-200 pb-12">
             <div>
-              <span className="text-xl font-black text-blue-600 uppercase tracking-[0.4em] mb-4 block">The Prime Fix Edge</span>
-              <h2 className="text-2xl md:text-4xl font-black text-slate-900 tracking-tighter uppercase leading-none">
-                Why Choose <br /> <span className="text-slate-400 italic">Our Expertise.</span>
+              <span className="text-xl font-bold text-blue-600 capitalize tracking-[0.4em] mb-4 block">The Prime Fix Edge</span>
+              <h2 className="text-2xl md:text-4xl font-bold text-slate-900  capitalize leading-none">
+                Why Choose <br /> <span className="text-slate-400">Our Expertise.</span>
               </h2>
             </div>
             <p className="text-slate-500 font-bold text-lg max-w-sm">Official partners, expert guidance, and fast nationwide logistics.</p>
@@ -174,25 +170,9 @@ export default function About() {
                 <div className={`h-12 w-12 rounded-2xl ${item.bg} ${item.color} flex items-center justify-center shrink-0 shadow-sm border border-white transition-all duration-500 group-hover:scale-110 group-hover:shadow-lg`}>
                   <item.icon size={22} strokeWidth={2.5} />
                 </div>
-                <h4 className="text-xl md:text-xs font-black text-slate-900 uppercase tracking-[0.15em] leading-tight group-hover:text-blue-600 transition-colors">{item.title}</h4>
+                <h4 className="text-xl md:text-xs font-bold text-slate-900 capitalize tracking-[0.15em] leading-tight group-hover:text-blue-600 transition-colors">{item.title}</h4>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section - Standardized Hero Style */}
-      <section className="px-6 md:px-10 lg:px-12 py-24 bg-white">
-        <div className="max-w-[1920px] mx-auto">
-          <div className="p-12 md:p-24 rounded-[4rem] bg-slate-900 text-white relative overflow-hidden text-center">
-            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,#3b82f6_0%,transparent_70%)] opacity-10" />
-            <span className="text-xl font-black tracking-[0.4em] uppercase text-blue-400 mb-8 block relative z-10">Start Your Journey</span>
-            <h2 className="text-3xl md:text-6xl font-black uppercase tracking-tighter mb-12 relative z-10 leading-none">
-              Build Your <br /><span className="text-slate-500 italic">Ultimate Workflow.</span>
-            </h2>
-            <Link to="/shop" className="inline-flex items-center gap-4 px-12 py-6 bg-blue-600 text-white rounded-2xl font-black text-xs uppercase tracking-widest hover:bg-white hover:text-slate-900 transition-all shadow-2xl relative z-10">
-              Start Browsing <ArrowRight size={18} />
-            </Link>
           </div>
         </div>
       </section>

@@ -22,19 +22,19 @@ export default function QuickPicks({ products = [] }) {
   return (
     <section className="px-6 md:px-10 lg:px-12 py-24 bg-white font-snpro">
       <div className="max-w-[1920px] mx-auto">
-        
+
         {/* --- Header --- */}
         <div className="flex items-end justify-between mb-16 gap-6">
           <div className="space-y-3">
             <div className="flex items-center gap-2">
               <Zap size={14} className="text-blue-600 fill-blue-600" />
-              <span className="text-[10px] font-black text-blue-600 uppercase tracking-[0.4em]">Recommended</span>
+              <span className="text-[10px] font-bold text-blue-600 capitalize tracking-[0.4em]">Recommended</span>
             </div>
-            <h2 className="text-3xl md:text-5xl font-black text-slate-950 uppercase tracking-tighter leading-none">
+            <h2 className="text-3xl md:text-5xl font-bold text-slate-950 capitalize  leading-none">
               Quick <span className="text-slate-400 italic">Picks.</span>
             </h2>
           </div>
-          
+
           <div className="flex gap-3">
             <button className="qp-prev h-12 w-12 rounded-full border border-slate-100 bg-white flex items-center justify-center hover:bg-slate-950 hover:text-white transition-all shadow-sm">
               <ArrowRight size={20} className="rotate-180" />
@@ -62,7 +62,7 @@ export default function QuickPicks({ products = [] }) {
         >
           {products.map((p, i) => (
             <SwiperSlide key={p.id}>
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -74,14 +74,14 @@ export default function QuickPicks({ products = [] }) {
                   <img src={getImagePath(p.images)} alt={p.name} className="max-w-full max-h-full object-contain" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-[9px] font-black text-blue-600 uppercase tracking-widest mb-1">{p.brand_name || 'Electronics'}</p>
-                  <h4 className="text-sm font-black text-slate-900 truncate uppercase tracking-tight">{p.name}</h4>
-                  <p className="text-base font-black text-slate-950 mt-1">${p.price}</p>
+                  <p className="text-[9px] font-bold text-blue-600 capitalize tracking-widest mb-1">{p.brand_name || 'Electronics'}</p>
+                  <h4 className="text-sm font-bold text-slate-900 truncate capitalize ">{p.name}</h4>
+                  <p className="text-base font-bold text-slate-950 mt-1">${p.price}</p>
                 </div>
-                <button 
-                  onClick={(e) => { 
-                    e.preventDefault(); 
-                    e.stopPropagation(); 
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
                     addToCart(p);
                   }}
                   className={`h-10 w-10 rounded-2xl flex items-center justify-center transition-all shadow-lg ${cart.find(i => i.id === p.id) ? 'bg-emerald-500 text-white' : 'bg-slate-950 text-white hover:bg-blue-600 scale-0 group-hover:scale-100'}`}

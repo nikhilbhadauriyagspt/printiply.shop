@@ -37,8 +37,8 @@ export default function TrendingProducts() {
   return (
     <section className="px-6 md:px-10 lg:px-12 py-12 bg-white font-urbanist">
       <div className="flex items-center justify-between mb-10">
-        <h3 className="text-2xl font-black tracking-tighter uppercase">Trending <span className="text-blue-600">Now.</span></h3>
-        <Link to="#" className="text-xs font-black text-slate-400 hover:text-black transition-colors uppercase tracking-widest flex items-center gap-2 group">
+        <h3 className="text-2xl font-bold  capitalize">Trending <span className="text-blue-600">Now.</span></h3>
+        <Link to="#" className="text-xs font-bold text-slate-400 hover:text-black transition-colors capitalize tracking-widest flex items-center gap-2 group">
           Explore All <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
         </Link>
       </div>
@@ -54,20 +54,20 @@ export default function TrendingProducts() {
             className="group cursor-pointer"
           >
             <div className={`aspect-square rounded-3xl ${p.color} border border-gray-100 p-8 relative overflow-hidden transition-all duration-500 group-hover:border-slate-300`}>
-              <img 
-                src={p.image} 
-                className="w-full h-full object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-700" 
-                alt={p.name} 
+              <img
+                src={p.image}
+                className="w-full h-full object-contain mix-blend-multiply group-hover:scale-110 transition-transform duration-700"
+                alt={p.name}
               />
-              <span className="absolute top-4 left-4 text-[8px] font-black uppercase tracking-[0.2em] bg-white px-3 py-1 rounded-full border border-gray-100 shadow-sm">
+              <span className="absolute top-4 left-4 text-[8px] font-bold capitalize tracking-[0.2em] bg-white px-3 py-1 rounded-full border border-gray-100 shadow-sm">
                 {p.tag}
               </span>
             </div>
             <div className="mt-4 px-2 flex justify-between items-start">
               <div>
-                <h4 className="font-black text-slate-900 text-sm tracking-tight">{p.name}</h4>
+                <h4 className="font-bold text-slate-900 text-sm ">{p.name}</h4>
                 <div className="flex items-center gap-3 mt-1">
-                  <span className="text-blue-600 font-black text-sm">{p.price}</span>
+                  <span className="text-blue-600 font-bold text-sm">{p.price}</span>
                   <div className="flex items-center gap-1 text-amber-400">
                     <Star size={10} fill="currentColor" />
                     <span className="text-[10px] font-bold text-slate-400">4.9</span>

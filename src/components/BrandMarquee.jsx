@@ -30,7 +30,7 @@ export default function BrandMarquee() {
     <div className="w-full bg-white border-b border-slate-100 h-14 lg:h-20 flex items-center overflow-hidden">
       {/* Fixed Label - Adds structure */}
       <div className="hidden lg:flex px-10 h-full items-center border-r border-slate-100 bg-slate-50/20 z-20">
-        <span className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 whitespace-nowrap">
+        <span className="text-[10px] font-bold capitalize tracking-[0.3em] text-slate-400 whitespace-nowrap">
           Our Partners
         </span>
       </div>
@@ -43,15 +43,15 @@ export default function BrandMarquee() {
 
         <div className="flex animate-marquee h-full items-center">
           {marqueeBrands.map((brand, idx) => (
-            <Link 
-              key={idx} 
+            <Link
+              key={idx}
               to={`/shop?brand=${encodeURIComponent(brand.name)}`}
               className="flex-shrink-0 mx-6 lg:mx-10 flex items-center justify-center h-full transition-all duration-500 cursor-pointer"
             >
-              <img 
-                src={brand.logo.startsWith('http') ? brand.logo : `/${brand.logo}`} 
-                alt={brand.name} 
-                className="h-6 lg:h-10 w-auto object-contain transition-all duration-500 hover:scale-110 opacity-90 hover:opacity-100" 
+              <img
+                src={brand.logo.startsWith('http') ? brand.logo : `/${brand.logo}`}
+                alt={brand.name}
+                className="h-6 lg:h-10 w-auto object-contain transition-all duration-500 hover:scale-110 opacity-90 hover:opacity-100"
                 onError={(e) => {
                   e.target.style.display = 'none';
                 }}

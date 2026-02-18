@@ -144,8 +144,8 @@ export default function CookiePolicy() {
         <address className="not-italic text-slate-700 font-bold leading-relaxed space-y-2">
           <p>Printiply LLC</p>
           <p>Authorised HP Partner</p>
-          <p>3014 Dauphine St Ste A PM3 357287</p>
-          <p>New Orleans, LA 70117</p>
+          <p>9412 S Roberts Rd</p>
+          <p>Hickory Hills, IL 60457</p>
           <p>United States</p>
           <p className="pt-4 flex items-center gap-3 text-blue-600">info@printiply.shop</p>
         </address>

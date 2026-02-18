@@ -50,16 +50,16 @@ export default function SEO({ title, description, keywords, schemaType = "Websit
       "description": finalDesc,
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "3014 Dauphine St Ste A PM3 357287",
-        "addressLocality": "New Orleans",
-        "addressRegion": "LA",
-        "postalCode": "70117",
+        "streetAddress": "9412 S Roberts Rd",
+        "addressLocality": "Hickory Hills",
+        "addressRegion": "IL",
+        "postalCode": "60457",
         "addressCountry": "US"
       },
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+1-402-508-9751",
-        "contactType": "customer service"
+        "contactType": "customer service",
+        "email": "info@printiply.shop"
       }
     };
 

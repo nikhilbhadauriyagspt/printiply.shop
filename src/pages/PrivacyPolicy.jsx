@@ -21,7 +21,7 @@ export default function PrivacyPolicy() {
       </p>
 
       <div className="bg-slate-50 p-8 rounded-[2rem] border border-slate-100 my-12 not-prose">
-        <h2 className="text-2xl font-black text-slate-900 uppercase mt-0 mb-6 tracking-tighter">SUMMARY OF KEY POINTS</h2>
+        <h2 className="text-2xl font-bold text-slate-900 capitalize mt-0 mb-6 ">SUMMARY OF KEY POINTS</h2>
         <p className="text-sm text-slate-600 leading-relaxed space-y-4">
           This summary provides key points from our Privacy Notice, but you can find out more details about any of these topics by clicking the link following each key point or by using our table of contents below to find the section you are looking for.
         </p>
@@ -159,7 +159,7 @@ export default function PrivacyPolicy() {
 
       <div className="overflow-x-auto my-8 not-prose">
         <table className="w-full text-sm text-left text-slate-500 border border-slate-200">
-          <thead className="text-xs text-slate-700 uppercase bg-slate-50 border-b border-slate-200">
+          <thead className="text-xs text-slate-700 capitalize bg-slate-50 border-b border-slate-200">
             <tr>
               <th className="px-6 py-3 border-r border-slate-200">Category</th>
               <th className="px-6 py-3 border-r border-slate-200">Examples</th>
@@ -170,62 +170,62 @@ export default function PrivacyPolicy() {
             <tr className="border-b border-slate-200">
               <td className="px-6 py-4 font-bold text-slate-900 border-r border-slate-200">A. Identifiers</td>
               <td className="px-6 py-4 border-r border-slate-200">Contact details, such as real name, alias, postal address, telephone or mobile contact number, unique personal identifier, online identifier, Internet Protocol address, email address, and account name</td>
-              <td className="px-6 py-4 text-slate-900 font-black">NO</td>
+              <td className="px-6 py-4 text-slate-900 font-bold">NO</td>
             </tr>
             <tr className="border-b border-slate-200">
               <td className="px-6 py-4 font-bold text-slate-900 border-r border-slate-200">B. Personal information as defined in the California Customer Records statute</td>
               <td className="px-6 py-4 border-r border-slate-200">Name, contact information, education, employment, employment history, and financial information</td>
-              <td className="px-6 py-4 text-slate-900 font-black">NO</td>
+              <td className="px-6 py-4 text-slate-900 font-bold">NO</td>
             </tr>
             <tr className="border-b border-slate-200">
               <td className="px-6 py-4 font-bold text-slate-900 border-r border-slate-200">C. Protected classification characteristics under state or federal law</td>
               <td className="px-6 py-4 border-r border-slate-200">Gender, age, date of birth, race and ethnicity, national origin, marital status, and other demographic data</td>
-              <td className="px-6 py-4 text-slate-900 font-black">NO</td>
+              <td className="px-6 py-4 text-slate-900 font-bold">NO</td>
             </tr>
             <tr className="border-b border-slate-200">
               <td className="px-6 py-4 font-bold text-slate-900 border-r border-slate-200">D. Commercial information</td>
               <td className="px-6 py-4 border-r border-slate-200">Transaction information, purchase history, financial details, and payment information</td>
-              <td className="px-6 py-4 text-slate-900 font-black">NO</td>
+              <td className="px-6 py-4 text-slate-900 font-bold">NO</td>
             </tr>
             <tr className="border-b border-slate-200">
               <td className="px-6 py-4 font-bold text-slate-900 border-r border-slate-200">E. Biometric information</td>
               <td className="px-6 py-4 border-r border-slate-200">Fingerprints and voiceprints</td>
-              <td className="px-6 py-4 text-slate-900 font-black">NO</td>
+              <td className="px-6 py-4 text-slate-900 font-bold">NO</td>
             </tr>
             <tr className="border-b border-slate-200">
               <td className="px-6 py-4 font-bold text-slate-900 border-r border-slate-200">F. Internet or other similar network activity</td>
               <td className="px-6 py-4 border-r border-slate-200">Browsing history, search history, online behavior, interest data, and interactions with our and other websites, applications, systems, and advertisements</td>
-              <td className="px-6 py-4 text-slate-900 font-black">NO</td>
+              <td className="px-6 py-4 text-slate-900 font-bold">NO</td>
             </tr>
             <tr className="border-b border-slate-200">
               <td className="px-6 py-4 font-bold text-slate-900 border-r border-slate-200">G. Geolocation data</td>
               <td className="px-6 py-4 border-r border-slate-200">Device location</td>
-              <td className="px-6 py-4 text-slate-900 font-black">NO</td>
+              <td className="px-6 py-4 text-slate-900 font-bold">NO</td>
             </tr>
             <tr className="border-b border-slate-200">
               <td className="px-6 py-4 font-bold text-slate-900 border-r border-slate-200">H. Audio, electronic, sensory, or similar information</td>
               <td className="px-6 py-4 border-r border-slate-200">Images and audio, video or call recordings created in connection with our business activities</td>
-              <td className="px-6 py-4 text-slate-900 font-black">NO</td>
+              <td className="px-6 py-4 text-slate-900 font-bold">NO</td>
             </tr>
             <tr className="border-b border-slate-200">
               <td className="px-6 py-4 font-bold text-slate-900 border-r border-slate-200">I. Professional or employment-related information</td>
               <td className="px-6 py-4 border-r border-slate-200">Business contact details in order to provide you our Services at a business level or job title, work history, and professional qualifications if you apply for a job with us</td>
-              <td className="px-6 py-4 text-slate-900 font-black">NO</td>
+              <td className="px-6 py-4 text-slate-900 font-bold">NO</td>
             </tr>
             <tr className="border-b border-slate-200">
               <td className="px-6 py-4 font-bold text-slate-900 border-r border-slate-200">J. Education Information</td>
               <td className="px-6 py-4 border-r border-slate-200">Student records and directory information</td>
-              <td className="px-6 py-4 text-slate-900 font-black">NO</td>
+              <td className="px-6 py-4 text-slate-900 font-bold">NO</td>
             </tr>
             <tr className="border-b border-slate-200">
               <td className="px-6 py-4 font-bold text-slate-900 border-r border-slate-200">K. Inferences drawn from collected personal information</td>
               <td className="px-6 py-4 border-r border-slate-200">Inferences drawn from any of the collected personal information listed above to create a profile or summary about, for example, an individual’s preferences and characteristics</td>
-              <td className="px-6 py-4 text-slate-900 font-black">NO</td>
+              <td className="px-6 py-4 text-slate-900 font-bold">NO</td>
             </tr>
             <tr>
               <td className="px-6 py-4 font-bold text-slate-900 border-r border-slate-200">L. Sensitive personal Information</td>
               <td className="px-6 py-4 border-r border-slate-200">None</td>
-              <td className="px-6 py-4 text-slate-900 font-black">NO</td>
+              <td className="px-6 py-4 text-slate-900 font-bold">NO</td>
             </tr>
           </tbody>
         </table>
@@ -267,7 +267,7 @@ export default function PrivacyPolicy() {
         <li>Right to opt out of the collection of sensitive data and personal data collected through the operation of a voice or facial recognition feature (as permitted by applicable law, including the privacy law in Florida)</li>
       </ul>
       <h3>How to Exercise Your Rights</h3>
-      <p>To exercise these rights, you can contact us by submitting a data subject access request, by emailing us at info@printiply.shop, by calling toll-free at +1-402-508-9751, by visiting <a href="http://primefixsolutions.co/contact">http://primefixsolutions.co/contact</a>, or by referring to the contact details at the bottom of this document.</p>
+      <p>To exercise these rights, you can contact us by submitting a data subject access request, by emailing us at info@printiply.shop, by visiting <a href="http://primefixsolutions.co/contact">http://primefixsolutions.co/contact</a>, or by referring to the contact details at the bottom of this document.</p>
       <p>Under certain US state data protection laws, you can designate an authorized agent to make a request on your behalf. We may deny a request from an authorized agent that does not submit proof that they have been validly authorized to act on your behalf in accordance with applicable laws.</p>
       <h3>Request Verification</h3>
       <p>Upon receiving your request, we will need to verify your identity to determine you are the same person about whom we have the information in our system. We will only use personal information provided in your request to verify your identity or authority to make the request. However, if we cannot verify your identity from the information already maintained by us, we may request that you provide additional information for the purposes of verifying your identity and for security or fraud-prevention purposes.</p>
@@ -287,8 +287,8 @@ export default function PrivacyPolicy() {
         <address className="not-italic text-slate-700 font-bold leading-relaxed">
           Printiply LLC<br />
           Authorised HP Partner<br />
-          3014 Dauphine st ste A PM3 357287<br />
-          New Orleans, LA 70117<br />
+          9412 S Roberts Rd<br />
+          Hickory Hills, IL 60457<br />
           United States
         </address>
       </div>

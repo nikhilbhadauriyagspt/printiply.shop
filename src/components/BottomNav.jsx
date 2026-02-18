@@ -33,7 +33,7 @@ export default function BottomNav() {
                 <div className="relative text-slate-400">
                   <Icon size={20} strokeWidth={isActive ? 2.5 : 2} />
                 </div>
-                <span className="text-[10px] font-black uppercase tracking-tighter text-slate-400">
+                <span className="text-[10px] font-bold capitalize  text-slate-400">
                   {item.name}
                 </span>
               </button>
@@ -49,18 +49,18 @@ export default function BottomNav() {
               <div className={`relative ${isActive ? 'text-blue-600' : 'text-slate-400'}`}>
                 <Icon size={20} strokeWidth={isActive ? 2.5 : 2} />
                 {item.name === 'Store' && cartCount > 0 && (
-                  <span className="absolute -top-1.5 -right-1.5 h-4 w-4 bg-black text-white text-[8px] font-black rounded-full flex items-center justify-center">
+                  <span className="absolute -top-1.5 -right-1.5 h-4 w-4 bg-black text-white text-[8px] font-bold rounded-full flex items-center justify-center">
                     {cartCount}
                   </span>
                 )}
                 {isActive && (
-                  <motion.div 
+                  <motion.div
                     layoutId="bottomNavActive"
-                    className="absolute -top-2 left-1/2 -translate-x-1/2 w-1 h-1 bg-blue-600 rounded-full" 
+                    className="absolute -top-2 left-1/2 -translate-x-1/2 w-1 h-1 bg-blue-600 rounded-full"
                   />
                 )}
               </div>
-              <span className={`text-[10px] font-black uppercase tracking-tighter ${isActive ? 'text-slate-900' : 'text-slate-400'}`}>
+              <span className={`text-[10px] font-bold capitalize  ${isActive ? 'text-slate-900' : 'text-slate-400'}`}>
                 {item.name}
               </span>
             </Link>

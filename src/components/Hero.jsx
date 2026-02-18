@@ -81,7 +81,7 @@ export default function Hero({ products = [] }) {
 
       <div className="max-w-[1920px] mx-auto px-4 md:px-8 lg:px-10">
         <section className="relative h-[75vh] md:h-[70vh] w-full overflow-hidden rounded-[3rem] lg:rounded-[4.5rem] bg-[#050505] group shadow-[0_50px_100px_-20px_rgba(0,0,0,0.5)] border border-white/5">
-          
+
           {/* --- IMMERSIVE BACKGROUND LAYER --- */}
           <AnimatePresence mode="wait">
             <motion.div
@@ -96,10 +96,10 @@ export default function Hero({ products = [] }) {
               <div className="absolute inset-0 z-10 bg-gradient-to-r from-[#050505] via-[#050505]/40 to-transparent"></div>
               <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#050505] via-transparent to-[#050505]/30"></div>
               <div className="absolute inset-0 z-10 bg-[radial-gradient(circle_at_20%_50%,rgba(59,130,246,0.15),transparent_50%)]"></div>
-              
-              <motion.img 
-                src={slides[current].image} 
-                alt="" 
+
+              <motion.img
+                src={slides[current].image}
+                alt=""
                 className="w-full h-full object-cover opacity-80"
                 initial={{ scale: 1.1, x: 20 }}
                 animate={{ scale: 1, x: 0 }}
@@ -107,8 +107,8 @@ export default function Hero({ products = [] }) {
               />
 
               {/* Decorative Lines/Grid */}
-              <div className="absolute inset-0 z-10 opacity-10 pointer-events-none" 
-                   style={{ backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)', backgroundSize: '80px 80px' }}>
+              <div className="absolute inset-0 z-10 opacity-10 pointer-events-none"
+                style={{ backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)', backgroundSize: '80px 80px' }}>
               </div>
             </motion.div>
           </AnimatePresence>
@@ -116,7 +116,7 @@ export default function Hero({ products = [] }) {
           {/* --- CONTENT LAYER --- */}
           <div className="relative z-20 h-full w-full px-8 md:px-16 lg:px-24 flex items-center">
             <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-              
+
               <div className="lg:col-span-7 relative z-30">
                 <AnimatePresence mode="wait">
                   <motion.div
@@ -128,30 +128,30 @@ export default function Hero({ products = [] }) {
                   >
                     {/* Premium Badge Cluster */}
                     <div className="flex flex-wrap items-center gap-3 mb-8">
-                      <motion.div 
+                      <motion.div
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         className="h-9 px-4 rounded-full bg-white/5 backdrop-blur-2xl border border-white/10 flex items-center gap-2.5 shadow-xl"
                       >
                         <div className="h-1.5 w-1.5 rounded-full bg-brand animate-pulse"></div>
-                        <span className="text-[9px] font-black text-white uppercase tracking-[0.5em]">{slides[current].tag}</span>
+                        <span className="text-[9px] font-bold text-white capitalize tracking-[0.5em]">{slides[current].tag}</span>
                       </motion.div>
-                      
-                      <motion.div 
+
+                      <motion.div
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.1 }}
                         className="h-9 px-4 rounded-full bg-white/10 backdrop-blur-2xl border border-white/20 flex items-center gap-3"
                       >
                         <img src="/brands/hp.jpg" alt="HP" className="h-5 w-5 rounded-full object-contain brightness-110" />
-                        <span className="text-[9px] font-black text-white uppercase tracking-widest">HP Authorized Partner</span>
+                        <span className="text-[9px] font-bold text-white capitalize tracking-widest">HP Authorized Partner</span>
                       </motion.div>
                     </div>
 
                     {/* Main Headline - Ultra Premium Typography (Expansive but Stable) */}
-                    <h1 className="text-4xl md:text-6xl lg:text-[6rem] font-black text-white leading-[0.85] tracking-[-0.05em] mb-10 uppercase">
+                    <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-[0.95] tracking-[0.02em] mb-10 capitalize">
                       <span className="block overflow-hidden">
-                        <motion.span 
+                        <motion.span
                           initial={{ y: "100%" }}
                           animate={{ y: 0 }}
                           transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
@@ -161,15 +161,15 @@ export default function Hero({ products = [] }) {
                         </motion.span>
                       </span>
                       <div className="flex items-center gap-6 mt-4">
-                         <motion.span 
-                           initial={{ width: 0 }}
-                           animate={{ width: "80px" }}
-                           transition={{ duration: 1, delay: 0.4 }}
-                           className="h-[2px] bg-brand/50 hidden md:block"
-                         />
-                         <span className={`italic font-light tracking-tighter normal-case ${slides[current].accent}`}>
-                           {slides[current].highlight}
-                         </span>
+                        <motion.span
+                          initial={{ width: 0 }}
+                          animate={{ width: "80px" }}
+                          transition={{ duration: 1, delay: 0.4 }}
+                          className="h-[2px] bg-brand/50 hidden md:block"
+                        />
+                        <span className={`font-light tracking-[0.05em] normal-case ${slides[current].accent}`}>
+                          {slides[current].highlight}
+                        </span>
                       </div>
                     </h1>
 
@@ -181,9 +181,9 @@ export default function Hero({ products = [] }) {
                     </div>
                     {/* Action Group - Lighter & More Elegant */}
                     <div className="flex flex-wrap items-center gap-4 relative z-50">
-                      <Link 
+                      <Link
                         to={slides[current].link}
-                        className="relative h-11 px-6 bg-white text-slate-950 rounded-lg font-bold text-[9px] uppercase tracking-[0.2em] overflow-hidden group/btn transition-all hover:shadow-[0_15px_30px_-10px_rgba(255,255,255,0.2)] active:scale-95 flex items-center justify-center"
+                        className="relative h-11 px-6 bg-white text-slate-950 rounded-lg font-bold text-[9px] capitalize tracking-[0.2em] overflow-hidden group/btn transition-all hover:shadow-[0_15px_30px_-10px_rgba(255,255,255,0.2)] active:scale-95 flex items-center justify-center"
                       >
                         <span className="relative z-10 flex items-center gap-2 group-hover/btn:text-white transition-colors duration-500">
                           {slides[current].cta} <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform duration-500" />
@@ -196,7 +196,7 @@ export default function Hero({ products = [] }) {
                         className="h-11 px-5 rounded-lg bg-white/5 backdrop-blur-3xl border border-white/10 flex items-center gap-3 text-white hover:bg-white/10 transition-all duration-500 group relative z-50"
                       >
                         <Search size={16} className="text-slate-400 group-hover:text-white transition-colors" />
-                        <span className="text-[9px] font-bold uppercase tracking-widest text-slate-400 group-hover:text-white">Search Catalog</span>
+                        <span className="text-[9px] font-bold capitalize tracking-widest text-slate-400 group-hover:text-white">Search Catalog</span>
                       </button>
                     </div>
                   </motion.div>
@@ -246,11 +246,11 @@ export default function Hero({ products = [] }) {
 
                         <div className="space-y-2">
                           <div>
-                            <span className="text-[6px] font-black text-brand uppercase tracking-[0.2em]">{product.brand_name || 'PREMIUM'}</span>
-                            <h3 className="text-[10px] font-bold text-white uppercase tracking-tight line-clamp-1 mt-0.5">{product.name}</h3>
+                            <span className="text-[6px] font-bold text-brand capitalize tracking-[0.2em]">{product.brand_name || 'PREMIUM'}</span>
+                            <h3 className="text-[10px] font-bold text-white capitalize  line-clamp-1 mt-0.5">{product.name}</h3>
                           </div>
                           <div className="flex items-center justify-between">
-                            <span className="text-xs font-black text-white">${product.price}</span>
+                            <span className="text-xs font-bold text-white">${product.price}</span>
                             <button
                               onClick={(e) => {
                                 e.preventDefault();
@@ -303,7 +303,7 @@ export default function Hero({ products = [] }) {
                           <div className={`absolute inset-0 bg-white/20 transition-transform duration-500 ${index < current ? 'translate-x-0' : '-translate-x-full'}`} />
                         )}
                       </div>
-                      <span className={`text-[9px] font-black uppercase tracking-widest transition-colors ${index === current ? 'text-brand' : 'text-slate-500 group-hover:text-slate-300'}`}>
+                      <span className={`text-[9px] font-bold capitalize tracking-widest transition-colors ${index === current ? 'text-brand' : 'text-slate-500 group-hover:text-slate-300'}`}>
                         0{index + 1}
                       </span>
                     </button>

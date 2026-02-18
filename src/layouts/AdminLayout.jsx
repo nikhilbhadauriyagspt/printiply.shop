@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Outlet, Link, useNavigate, useLocation } from 'react-router-dom';
-import { 
-  LayoutDashboard, 
-  Package, 
-  Users, 
-  Settings, 
-  LogOut, 
+import {
+  LayoutDashboard,
+  Package,
+  Users,
+  Settings,
+  LogOut,
   Menu,
   X,
   Bell,
@@ -47,11 +47,11 @@ export default function AdminLayout() {
 
   return (
     <div className="flex h-screen bg-gray-50 font-urbanist">
-      
+
       {/* SIDEBAR */}
       <aside className={`fixed inset-y-0 left-0 z-50 w-64 bg-slate-900 text-white transition-transform duration-300 ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} lg:relative lg:translate-x-0`}>
         <div className="flex items-center justify-between h-16 px-6 border-b border-slate-800">
-          <span className="text-xl font-black tracking-tighter">PRINTIPLY<span className="text-blue-500">.</span> ADMIN</span>
+          <span className="text-xl font-bold ">PRINTIPLY<span className="text-blue-500">.</span> ADMIN</span>
           <button onClick={() => setSidebarOpen(false)} className="lg:hidden text-slate-400 hover:text-white">
             <X size={20} />
           </button>
@@ -59,14 +59,13 @@ export default function AdminLayout() {
 
         <nav className="flex flex-col gap-1 p-4">
           {navItems.map((item) => (
-            <Link 
-              key={item.path} 
-              to={item.path} 
-              className={`flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-bold transition-all ${
-                location.pathname === item.path 
-                ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/20' 
+            <Link
+              key={item.path}
+              to={item.path}
+              className={`flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-bold transition-all ${location.pathname === item.path
+                ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/20'
                 : 'text-slate-400 hover:bg-slate-800 hover:text-white'
-              }`}
+                }`}
             >
               <item.icon size={18} />
               {item.name}
@@ -83,13 +82,13 @@ export default function AdminLayout() {
 
       {/* MAIN CONTENT */}
       <div className="flex-1 flex flex-col overflow-hidden">
-        
+
         {/* HEADER */}
         <header className="flex items-center justify-between h-16 px-6 bg-white border-b border-gray-200 shadow-sm">
           <button onClick={() => setSidebarOpen(true)} className="lg:hidden text-slate-500 hover:text-slate-900">
             <Menu size={24} />
           </button>
-          
+
           <div className="flex items-center gap-6 ml-auto">
             <button className="relative text-slate-400 hover:text-slate-600">
               <Bell size={20} />
