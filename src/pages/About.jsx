@@ -77,7 +77,7 @@ export default function About() {
             <div className="grid grid-cols-1 gap-4">
               <div className="p-8 bg-blue-50/50 rounded-3xl border border-blue-100 flex flex-col items-center justify-center text-center">
                 <h4 className="text-4xl font-bold text-blue-600 mb-2">100%</h4>
-                <p className="text-xl font-bold text-slate-400 capitalize tracking-widest">Genuine Tech</p>
+                <p className="text-xl font-bold text-slate-400 capitalize tracking-widest">genuine Product</p>
               </div>
             </div>
           </div>

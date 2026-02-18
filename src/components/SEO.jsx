@@ -9,7 +9,7 @@ export default function SEO({ title, description, keywords, schemaType = "Websit
 
     // Update Description
     const metaDescription = document.querySelector('meta[name="description"]');
-    const finalDesc = description || "Authorized HP partner specializing in pro workstations, precision printing, and genuine tech accessories.";
+    const finalDesc = description || "Authorized HP partner specializing in pro workstations, precision printing, and genuine Product accessories.";
     if (metaDescription) {
       metaDescription.setAttribute('content', finalDesc);
     }
